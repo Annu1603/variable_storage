@@ -1,0 +1,57 @@
+//SPDX-License-Identifier: MIT
+pragma solidity 0.8.7;
+
+contract VarStorage {
+    
+    int public myInt;
+    bool public myBool;
+    address public myAddress;
+    string public myString;
+
+    
+    constructor(int _int, bool _bool, address _address, string memory _string) {
+        myInt = _int;
+        myBool = _bool;
+        myAddress = _address;
+        myString = _string;
+    }
+
+    
+    function getMyInt() public view returns (int) {
+        return myInt;
+    }
+
+    function setMyInt(int _myInt) public returns (int) {
+        myInt = _myInt;
+        return myInt;
+    }
+
+    function getMyBool() public view returns (bool) {
+        return myBool;
+    }
+
+    function setMyBool(bool _myBool) public returns (bool) {
+        myBool = _myBool;
+        return myBool;
+    }
+
+    
+    function getMyAddress() public view returns (address) {
+        return myAddress;
+    }
+
+    function setMyAddress(address _myAddress) public returns (address) {
+        myAddress = _myAddress;
+        return myAddress;
+    }
+
+    function getMyString() public view returns (string memory) {
+        return myString;
+    }
+
+    function setMyString(string memory _myString) public returns (string memory) {
+        myString = _myString;
+        return myString;
+    }
+}
+
